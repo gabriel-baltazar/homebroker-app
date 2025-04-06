@@ -1,0 +1,52 @@
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+    "name": "Microsoft",
+    "symbol": "MSFT",
+    "price": 100,
+    "image": "MSFT.png"
+}
+
+###
+GET http://localhost:3000/assets
+
+###
+PATCH http://localhost:3000/assets/A1
+Content-Type: application/json
+
+{
+    "name": "Amazon",
+    "symbol": "A1",
+    "price": 200,
+    "image": "AMZN.png"
+}
+
+###
+GET http://localhost:3000/assets/MSFT
+
+###
+DELETE http://localhost:3000/assets/MSFT
+
+### Wallets
+POST http://localhost:3000/wallets
+
+###
+GET http://localhost:3000/wallets
+
+###
+PATCH http://localhost:3000/wallets/A1
+Content-Type: application/json
+
+{
+    "name": "Amazon",
+    "symbol": "A1",
+    "price": 200,
+    "image": "AMZN.png"
+}
+
+###
+GET http://localhost:3000/wallets/MSFT
+
+###
+DELETE http://localhost:3000/wallets/MSFT

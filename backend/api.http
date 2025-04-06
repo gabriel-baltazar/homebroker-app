@@ -35,18 +35,10 @@ POST http://localhost:3000/wallets
 GET http://localhost:3000/wallets
 
 ###
-PATCH http://localhost:3000/wallets/A1
-Content-Type: application/json
-
-{
-    "name": "Amazon",
-    "symbol": "A1",
-    "price": 200,
-    "image": "AMZN.png"
-}
+PATCH http://localhost:3000/wallets/2fdd7206-34dd-4de8-bf8a-5d79fc1d9242
 
 ###
 GET http://localhost:3000/wallets/MSFT
 
 ###
-DELETE http://localhost:3000/wallets/MSFT
+DELETE http://localhost:3000/wallets/e04e535c-32d4-4a00-b38d-92fc64ff7ca6

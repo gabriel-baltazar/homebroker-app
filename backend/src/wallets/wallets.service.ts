@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { CreateWalletDto } from './dto/create-wallet.dto';
-import { UpdateWalletDto } from './dto/update-wallet.dto';
 import { Model } from 'mongoose';
 import { Wallet } from './entities/wallet.entity';
 import { InjectModel } from '@nestjs/mongoose';
@@ -20,11 +19,7 @@ export class WalletsService {
     return this.walletSchema.findById(id);
   }
 
-  update(id: string, updateWalletDto: UpdateWalletDto) {
-    return this.walletSchema.updateOne({ id }, updateWalletDto);
-  }
-
   remove(id: string) {
-    return this.walletSchema.deleteOne({ id });
+    return this.walletSchema.deleteOne({ _id: id });
   }
 }
